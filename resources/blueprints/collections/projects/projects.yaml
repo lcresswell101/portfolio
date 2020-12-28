@@ -1,0 +1,85 @@
+title: Projects
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: repeatable_content
+        field:
+          collapse: false
+          sets:
+            repeatable_content_fieldset:
+              display: 'Repeatable Content Fieldset'
+              fields:
+                -
+                  handle: repeatable_content_image
+                  field:
+                    mode: grid
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    max_files: 1
+                    display: 'Repeatable Content Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                -
+                  handle: repeatable_content_text
+                  field:
+                    antlers: true
+                    display: 'Repeatable Content Text'
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+          display: 'Repeatable Content'
+          type: replicator
+          icon: replicator
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: featured_image
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Featured Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: project_link
+        field:
+          display: 'Project Link'
+          type: link
+          icon: link
+          listable: hidden
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - projects
+          max_items: 1
+          listable: false
+          localizable: true

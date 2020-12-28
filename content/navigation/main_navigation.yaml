@@ -1,0 +1,9 @@
+title: 'Main Navigation'
+collections:
+  - pages
+max_depth: 1
+tree:
+  -
+    entry: home
+  -
+    entry: bab406b6-1b0c-4625-8b8d-472ac5794e09

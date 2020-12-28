@@ -1,0 +1,14 @@
+title: Projects
+template: projects/show
+layout: layout
+revisions: false
+route: '/projects/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+structure:
+  root: false
+  tree:
+    -
+      entry: 5d6244a8-0a7b-46d9-b21a-9493ac6763da
